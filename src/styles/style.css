@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.container {
+  background-color: #eceff1;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.content {
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+  border-radius: 0.3rem;
+  background-color: #ffffff;
+  color: #546e7a;
+  font-family: 'Open Sans', sans-serif;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 3rem;
+}
+
+.content h1 {
+  font-size: 24pt;
+  margin: 0 0 0.8rem 0;
+  font-weight: 700;
+}
+
+.content h2 {
+  font-size: 16pt;
+  text-align: center;
+  line-height: 1.8rem;
+  margin: 0;
+}
+
+.content span {
+  color: #019cdf;
+}
+
+.content img {
+  height: 10rem;
+  margin: 3rem;
+}
+
+.button {
+  font-size: 12pt;
+  font-weight: bold;
+  padding: 0.7rem 1.8rem;
+}
+
+.container-produtos {
+  padding: 3rem 10rem;
+}
+
+.content-produtos h2 {
+  margin: 0;
+  font-family: 'Open Sans';
+  color: #546e7a;
+  font-weight: 600;
+}
+
+.produtos {
+  padding: 2rem 0;
+}
+
+.item-produto {
+  width: 13rem;
+  padding: 1rem;
+  overflow: hidden;
+  height: 19rem;
+  transition: 1s;
+}
+
+.item-produto:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 0.3rem;
+}
+
+.item-produto img {
+  width: 100%;
+}
+
+.item-produto h3 {
+  font-size: 9pt;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  color: #546e7a;
+  margin: 0.5rem 0;
+}
+
+.item-produto h4 {
+  font-size: 14pt;
+  font-family: 'Open Sans';
+  color: #546e7a;
+  margin: 0 0 0.4rem 0;
+}
+
+.item-produto h5 {
+  font-size: 8pt;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  color: #a8b7bf;
+  margin: 0;
+}
+
+.info-produto {
+  transition: 1s;
+  padding: 0.2rem 0 0 0;
+}
+
+.item-produto:hover .info-produto {
+  transform: translateY(-8rem);
+  background-color: #ffffffcb;
+}
+
+.opcoes-produto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.opcoes-produto .button {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.counter {
+  margin: 1rem 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.count-value {
+  width: 7rem;
+}
