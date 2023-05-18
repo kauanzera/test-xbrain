@@ -8,7 +8,7 @@ const Rotas = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Produtos />} path='/produtos' />
+        <Route element={<Produtos />} path='/' />
         <Route element={<FinalizacaoCompra />} path='/finalizacaocompra' />
       </Routes>
     </BrowserRouter>
