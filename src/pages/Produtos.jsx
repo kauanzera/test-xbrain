@@ -161,15 +161,19 @@ function Produtos() {
         <hr />
         <div className="dados-cli">
           <div className="formulario">
-            <TextField id="outlined-basic" placeholder='Nome do cliente aqui' label="Nome" variant="outlined" sx={{ mr: 2 }} fullWidth onChange={handleChange} value={nome} />
-            <TextField type="email" id="outlined-basic" placeholder='Digite seu email aqui' label="Email" variant="outlined" fullWidth onChange={(e) => setEmail(e.target.value)} value={email} />
-            <FormControl sx={{ ml: 2, minWidth: 180 }}>
-              <InputLabel id="demo-simple-select-label">Sexo</InputLabel>
-              <Select placeholder='selecione' labelId="demo-simple-select-label" id="demo-simple-select" value={sex} label="Age" onChange={handleChange}>
-                <MenuItem value={1}>Masculino</MenuItem>
-                <MenuItem value={2}>Feminino</MenuItem>
-              </Select>
-            </FormControl>
+            <div className='form-dados'>
+              <TextField id="outlined-basic" placeholder='Nome do cliente aqui' label="Nome" variant="outlined" sx={{ mr: 2 }} fullWidth onChange={handleChange} value={nome} />
+              <TextField type="email" id="outlined-basic" placeholder='Digite seu email aqui' label="Email" variant="outlined" fullWidth onChange={(e) => setEmail(e.target.value)} value={email} />
+            </div>
+            <div>
+              <FormControl sx={{ ml: 2, minWidth: 180 }}>
+                <InputLabel id="demo-simple-select-label">Sexo</InputLabel>
+                <Select placeholder='selecione' labelId="demo-simple-select-label" id="demo-simple-select" value={sex} label="Age" onChange={handleChange}>
+                  <MenuItem value={1}>Masculino</MenuItem>
+                  <MenuItem value={2}>Feminino</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
           </div>
           <div className="total">
             <h2 id="total">Total: {total}</h2>

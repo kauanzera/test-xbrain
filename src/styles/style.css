@@ -155,6 +155,11 @@ a {
   display: flex;
 }
 
+.form-dados {
+  display: flex;
+  width: 100%;
+}
+
 #total {
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -201,7 +206,67 @@ a {
 
   .produtos {
     grid-template-columns: repeat(3, 1fr);
-    gap: 0rem;
-    width: 50rem;
+    gap: 1rem 0;
+    width: 40rem;
   }
+
+  .formulario {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-dados {
+    display: flex;
+  }
+
+  /* nome da classe da div do formcontrol */
+  .css-167ff3w-MuiFormControl-root {
+    margin: 1rem 0 !important;
+
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  .produtos {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .item-produto {
+    width: 11rem;
+    padding: 0.5rem;
+  }
+
+  .form-dados {
+    flex-direction: column;
+  }
+
+  .dados-cli {
+    width: 12rem;
+  }
+
+  .css-wb57ya-MuiFormControl-root-MuiTextField-root {
+    margin: 1rem 0 0 0 !important;
+  }
+
+  .css-167ff3w-MuiFormControl-root {
+    width: 100% !important;
+  }
+
+  .total {
+    margin-top: 1rem;
+  }
+
+  .container {
+    background-color: #ffffff;
+  }
+
+  .content {
+    box-shadow: none;
+  }
+
+  .content-produtos h2 {
+    font-size: 1rem;
+  }
+
 }
