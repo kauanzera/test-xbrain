@@ -193,3 +193,15 @@ a {
   font-size: 1.5rem;
   margin: 0;
 }
+
+@media screen and (max-width: 720px) {
+  .container-produtos {
+    padding: 2rem 1rem;
+  }
+
+  .produtos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0rem;
+    width: 50rem;
+  }
+}

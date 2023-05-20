@@ -27,7 +27,7 @@ function Produtos() {
       id: 1,
       img: produto1,
       name: "Airpods Apple Fones de Ouvido",
-      price: parseFloat('1.499,00'),
+      price: 1499,
       info1: "Em até 12x de R$ 124,92",
       info2: "R$ 1.349 á vista (10% de desconto)",
       qnt: 0,
@@ -63,7 +63,7 @@ function Produtos() {
       id: 5,
       img: produto5,
       name: "Caixa prateada de alumínio com pulseira esportiva branca",
-      price: 2.899,
+      price: 2899,
       info1: "Em até 12x de R$ 241,58",
       info2: "R$ 2.609,10 á vista (10% de desconto)",
       qnt: 0,
@@ -81,7 +81,7 @@ function Produtos() {
       id: 7,
       img: produto7,
       name: "Smart Keybord para iPad Pro 12,9 polegadas - Inglês (EUA)",
-      price: 1.099,
+      price: 1099,
       info1: "Em até 12x de R$ 91,58",
       info2: "R$ 989,10 á vista (10% de desconto)",
       qnt: 0,
@@ -119,6 +119,7 @@ function Produtos() {
     newItems[index].qnt--;
     setTotal(previous => previous - newItems[index].price)
     setProds(newItems);
+    dispatch(decrement(count))
   };
 
   useEffect(() => {
