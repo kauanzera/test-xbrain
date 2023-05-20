@@ -13,10 +13,10 @@ import { Button, TextField, InputLabel, MenuItem, FormControl, FormHelperText } 
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from '../redux/counterSlice';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import { Link } from 'react-router-dom'
-import { Form } from 'react-final-form'
+import { useNavigate } from 'react-router-dom';
 
 function Produtos() {
+  const navigate = useNavigate()
 
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
@@ -122,6 +122,19 @@ function Produtos() {
     dispatch(decrement(count))
   };
 
+  const [error, setError] = useState(false)
+  const [errorText, setErrorText] = useState("")
+
+  const onSubmit = (nome) => {
+    if (nome !== "") {
+      navigate("/finalizacaocompra")
+    } else {
+      setError(true)
+      setErrorText("Campo obrigatório")
+      navigate("/")
+    }
+  }
+
   useEffect(() => {
     localStorage.setItem('nome', JSON.stringify(nome));
     localStorage.setItem('total', JSON.stringify(total));
@@ -162,7 +175,7 @@ function Produtos() {
         <div className="dados-cli">
           <div className="formulario">
             <div className='form-dados'>
-              <TextField id="outlined-basic" placeholder='Nome do cliente aqui' label="Nome" variant="outlined" sx={{ mr: 2 }} fullWidth onChange={handleChange} value={nome} />
+              <TextField required error={error} helperText={errorText} id="outlined-basic" placeholder='Nome do cliente aqui' label="Nome" variant="outlined" sx={{ mr: 2 }} fullWidth onChange={handleChange} value={nome} />
               <TextField type="email" id="outlined-basic" placeholder='Digite seu email aqui' label="Email" variant="outlined" fullWidth onChange={(e) => setEmail(e.target.value)} value={email} />
             </div>
             <div>
@@ -177,10 +190,8 @@ function Produtos() {
           </div>
           <div className="total">
             <h2 id="total">Total: {total}</h2>
-            <Button className="button" color='warning' variant='contained'>
-              <Link to="/finalizacaocompra">
-                Finalizar Compra
-              </Link>
+            <Button className="button" color='warning' variant='contained' onClick={() => onSubmit(nome)}>
+              Finalizar Compra
             </Button>
           </div>
         </div>

@@ -199,6 +199,10 @@ a {
   margin: 0;
 }
 
+.css-1qtu9q6-MuiButtonBase-root-MuiButton-root {
+  font-weight: 700 !important;
+}
+
 @media screen and (max-width: 720px) {
   .container-produtos {
     padding: 2rem 1rem;
